@@ -15,10 +15,10 @@ if (k1 == k2)
 }
 else
 {
-    Console.WriteLine($"Точка пересечения прямых - {DefinesParallelism(k1, b1, k2, b2)}");
+    Console.WriteLine($"Точка пересечения прямых - {DefinesIntersectionPoint(k1, b1, k2, b2)}");
 }
 
-(int, int) DefinesParallelism(int k1, int b1, int k2, int b2)
+(int, int) DefinesIntersectionPoint(int k1, int b1, int k2, int b2)
 {
     int x = (b2 - b1) / (k1 - k2);
     int y = k1 * x + b1;
