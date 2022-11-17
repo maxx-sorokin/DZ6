@@ -11,11 +11,16 @@ int b2 = Convert.ToInt32(Console.ReadLine());
 
 if (k1 == k2)
 {
-    Console.WriteLine("Прямые параллельны");
+    Console.WriteLine("Прямые параллельны => точки пересечения нет");
 }
 else
 {
+    Console.WriteLine($"Точка пересечения прямых - {DefinesParallelism(k1, b1, k2, b2)}");
+}
+
+(int, int) DefinesParallelism(int k1, int b1, int k2, int b2)
+{
     int x = (b2 - b1) / (k1 - k2);
     int y = k1 * x + b1;
-     Console.WriteLine($"Точка пересечения прямых - ({x}; {y})");
+    return (x, y);
 }
